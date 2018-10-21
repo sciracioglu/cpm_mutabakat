@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BaBsController@index');
+Route::get('/{id}', 'BaBsController@show');
+Route::get('onay/{id}', 'BaBsController@store');
