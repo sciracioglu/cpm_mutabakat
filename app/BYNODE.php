@@ -13,13 +13,4 @@ class BYNODE extends Model
         'ISLEMTARIHI',
         'ACIKLAMA'
     ];
-
-    public static function boot()
-    {
-        parent::boot();
-
-        static::updating(function ($model) {
-            $model->islemtarihi = date('d/m/Y H:i:s');
-        });
-    }
 }

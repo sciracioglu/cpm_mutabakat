@@ -48,7 +48,8 @@
     @if($data->ISLEM == 0)
     <div class="flex flex-justified">
         <div class="flex-1">
-            <button class="bg-transparent hover:bg-red text-red-dark font-semibold hover:text-white py-2 px-4 border border-red hover:border-transparent rounded">Bilgi</button>
+            <a href='bilgi/{{ $data->GUID }}' class="bg-transparent hover:bg-red text-red-dark font-semibold hover:text-white py-2 px-4 border border-red hover:border-transparent rounded">Mesaj Gonder</a>
+            <textarea></textarea>
         </div>
         <div class="">
             <a href='onay/{{ $data->GUID }}' class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Onalıyorum</a>
@@ -59,5 +60,13 @@
 @endsection
 
 @section('script')
+<script>
+var vue = new Vue({
+    el:'#app',
+    data:{
+        mesaj:null,
+    }
+})
 
+</script>
 @endsection

@@ -7,6 +7,7 @@ use App\Mail\BaBsMail;
 use Illuminate\Support\Facades\Mail;
 use App\VWADTY;
 use App\BYNODE;
+use App\ARGMSJ;
 
 class BaBsController extends Controller
 {
@@ -30,9 +31,20 @@ class BaBsController extends Controller
     {
         BYNODE::where('GUID', $id)
                 ->update([
-                    'ACIKLAMA' => 'Onaylandı',
-                    'ISLEM'    => 1
+                    'ACIKLAMA'    => 'Onaylandı',
+                    'ISLEM'       => 1,
+                    'ISLEMTARIH'  => date('Y-m-d H:i:s')
                 ]);
+        return back();
+    }
+
+    public function bilgi($id)
+    {
+        ARGMSJ::create([
+            'GUID'  => $id,
+            'MESAJ' => 'Mesaj'
+        ]);
+
         return back();
     }
 }
