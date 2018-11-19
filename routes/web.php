@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('logo/{id}', 'BaBsController@logo');
 Route::get('/', 'BaBsController@index');
 Route::get('/{id}', 'BaBsController@show');
 Route::get('onay/{id}', 'BaBsController@store');

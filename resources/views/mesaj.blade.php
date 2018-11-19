@@ -1,5 +1,8 @@
 @extends('layout.bilgi')
-
+@section('logo')
+    <img src="/logo/{{ $data->GUID }}" style="height:54px" class="d-inline-block align-top" alt="" />
+    <span class="ml-3 text-xl tracking-tight font-sans text-4xl">{{ $firma->KISAAD }}</span>
+@endsection
 @section('baslik','Bilgi Formu')
 
 @section('icerik')

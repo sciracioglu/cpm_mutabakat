@@ -1,5 +1,8 @@
 @extends('layout.sablon')
-
+@section('logo')
+    <img src="/logo/{{ $data->GUID }}" style="height:54px" class="d-inline-block align-top" alt="" />
+    <span class="ml-3 text-xl tracking-tight font-sans text-4xl">{{ $firma->KISAAD }}</span>
+@endsection
 @section('baslik','Fatura Detayı')
 
 @section('icerik')
@@ -51,7 +54,7 @@
             <a href='mesaj/{{ $data->GUID }}' class="bg-transparent hover:bg-red text-red-dark font-semibold hover:text-white py-2 px-4 border border-red hover:border-transparent rounded">Mesaj Gonder</a>
         </div>
         <div class="">
-            <a href='onay/{{ $data->GUID }}' class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Onalıyorum</a>
+            <a href='onay/{{ $data->GUID }}' class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Onaylıyorum</a>
         </div>
     </div>
     @endif
@@ -61,10 +64,12 @@
 @section('script')
 <script>
 var vue = new Vue({
-    el:'#app',
+    el:'#v',
     data:{
+        id:'{!! $data->GUID !!}',
         mesaj:null,
-    }
+    },
+   
 })
 
 </script>

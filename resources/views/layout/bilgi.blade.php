@@ -13,8 +13,7 @@
         <div class="flex h-screen flex-col">
             <nav class="flex items-center bg-grey-lighter justify-between flex-wrap p-6 shadow">
                 <div class="flex items-center flex-no-shrink mr-6">
-                    <img src="/img/aragonit.png" style="height:54px" class="d-inline-block align-top" alt="">
-                    <span class="ml-3 text-xl tracking-tight font-sans text-4xl">aragonit bilgi teknolojileri</span>
+                    @yield('logo')
                 </div>
                 <div class="block lg:hidden">
                     <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
