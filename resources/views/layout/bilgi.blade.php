@@ -22,7 +22,7 @@
                     </button>
                 </div>
             </nav>    
-            <div class="px-4 mt-4 mx-auto flex-1 font-body text-xl">
+            <div class="px-4 mt-4 flex-1 font-body text-xl">
                 @yield('icerik')
             </div>
             <footer class="p-4 mt-6 bg-black text-grey-darker ">
@@ -37,6 +37,6 @@
         </div>
     </div>
     <script src="/js/app.js"></script>
-    @yield('script')
+    @yield('scripts')
 </body>
 </html>

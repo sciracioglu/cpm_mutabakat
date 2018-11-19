@@ -135,7 +135,7 @@
                 Fatura detayınız için aşağıdaki düğmeye basınız.
             </p> 
            
-			<a href='https://cpm_mutabakat.test/{{ $data->GUID}}'>
+			<a href='https://cpm_mutabakat.test/{{ $data->GUID }}'>
                 Fatura Detayı
             </a>
             <hr>

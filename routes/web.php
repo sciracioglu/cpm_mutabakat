@@ -14,4 +14,5 @@
 Route::get('/', 'BaBsController@index');
 Route::get('/{id}', 'BaBsController@show');
 Route::get('onay/{id}', 'BaBsController@store');
-Route::get('bilgi/{id}', 'BaBsController@bilgi');
+Route::get('mesaj/{id}', 'MesajController@index');
+Route::post('mesaj', 'MesajController@store');
