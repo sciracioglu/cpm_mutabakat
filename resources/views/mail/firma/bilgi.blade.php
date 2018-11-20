@@ -102,15 +102,15 @@
 		}
 	</style>
     <body>
-            <img src="{{ $message->embed('/logo/{{ $id }}') }}" height="80" style="height:80px;">
+            <img src="{{ $message->embed(public_path().'/img/'.$data['sirket'].'.png') }}" height="80" style="height:80px;">
 			<hr/>
             <p>
-                {{ $mesaj }}
+                {!! $data['mesaj'] !!}
             </p>
             <hr />
             <div>
 				<div style="display:flex; align-items:center;">
-					<img src="{{ $message->embed('img/aragonit.png') }}" style="height:40px;">
+					<img src="{{ $message->embed(public_path().'/img/aragonit.png') }}" style="height:40px;">
 				</div>
 				<div style="display:flex;">
 					© {{ date('Y') }} {{ config('app.name') }}. @lang('Tüm hakları saklıdır.')

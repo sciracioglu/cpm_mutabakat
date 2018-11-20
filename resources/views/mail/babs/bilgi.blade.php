@@ -102,7 +102,7 @@
 		}
 	</style>
     <body>
-            <img src="{{ $message->embed('/logo/{{ $data->GUID }}') }}" height="80" style="height:80px;">
+            <img src="{{ $message->embed(public_path().'/img/'.$data->SIRKETNO.'.png') }}" height="80" style="height:80px;">
 			<hr/>
             <h3>
                 Sayın {{ $data->FIRMAADI }},
@@ -141,7 +141,7 @@
             <hr>
             <div>
 				<div style="display:flex; align-items:center;">
-					<img src="{{ $message->embed('img/aragonit.png') }}" style="height:40px;">
+					<img src="{{ $message->embed(public_path().'/img/aragonit.png') }}" style="height:40px;">
 				</div>
 				<div style="display:flex;">
 					© {{ date('Y') }} {{ config('app.name') }}. @lang('Tüm hakları saklıdır.')

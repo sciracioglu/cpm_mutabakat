@@ -29,8 +29,7 @@ class BilgiMail extends Mailable
      */
     public function build()
     {
-        dd($this->data);
-        return $this->to($this->data->EMAIL)
+        return $this->to($this->data['firma_mail'])
                     ->view('mail.firma.bilgi');
     }
 }
