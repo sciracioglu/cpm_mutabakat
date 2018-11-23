@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         if (App::environment('production')) {
-            $schedule->call('App\Http\Controllers\BaBsController@index')->everyMinute()->emailOutputTo(['sciracioglu@gmail.com']);
+            $schedule->call('App\Http\Controllers\BaBsController@index')->everyMinute();
         }
     }
 
