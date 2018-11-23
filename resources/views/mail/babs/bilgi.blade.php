@@ -112,26 +112,26 @@
                  Firmanıza ait bakiye bilgileri aşağıdaki gibidir.
             </p>
             
-            <table class="table" style="width:470px;">
-                <thead>
+            <table class="table" style="width:600px;">
                     <tr>
-                        <th>Borç</th>
-                        <th>Alacak</th>
-                        <th>Bakiye</th>
-                        <th>Bakiye Bekleme Süresi</th>
-                        <th>Bakiye Ortalama Vade</th>
+						<th>Borç</th>
+						<td style="text-align:right;">{{ number_format($data->BORC,2,',','.') }}</td>
+					</tr>
+					<tr>
+						<th>Alacak</th>
+						<td style="text-align:right;">{{ number_format($data->ALACAK,2,',','.')}}</td>
+					</tr>
+					<tr>
+						<th>Bakiye</th>
+						<td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }}</td>
+					</tr>
+					<tr>
+						<th>Bakiye Bekleme Süresi</th>
+						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
+					</tr>
+						<th>Bakiye Ortalama Vade</th>
+						<td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ $data->EVRAKADET }} Adet</td>
-                        <td style="text-align:right;">{{ number_format($data->BORC,2,',','.') }}</td>
-                        <td style="text-align:right;">{{ number_format($data->ALACAK,2,',','.')}}</td>
-                        <td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }}</td>
-                        <td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
-                        <td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
-                    </tr>
-                </tbody>
             </table>
                
             <p>
