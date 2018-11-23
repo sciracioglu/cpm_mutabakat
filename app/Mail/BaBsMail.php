@@ -29,7 +29,7 @@ class BaBsMail extends Mailable
      */
     public function build()
     {
-        return $this->to($this->data->EMAIL1)
+        return $this->to($this->data->EMAIL5)
                     ->view('mail.babs.bilgi');
     }
 }
