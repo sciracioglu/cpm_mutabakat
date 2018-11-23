@@ -105,28 +105,31 @@
             <img src="{{ $message->embed(public_path().'/img/'.$data->SIRKETNO.'.png') }}" height="80" style="height:80px;">
 			<hr/>
             <h3>
-                Sayın {{ $data->FIRMAADI }},
+                Sayın {{ $data->UNVAN }},
             </h3>
            
             <p>
-                {{ $data->YIL }} / {{ $data->DONEM }} ayı içerisinde firmanıza kesmiş olduğumuz fatura bilgileri aşağıdaki gibidir.
+                 Firmanıza ait bakiye bilgileri aşağıdaki gibidir.
             </p>
             
             <table class="table" style="width:470px;">
                 <thead>
                     <tr>
-                        <th>Fatura Adedi</th>
-                        <th>KDV Matrah</th>
-                        <th>KDV Tutar</th>
-                        <th>Genel Toplam</th>
+                        <th>Borç</th>
+                        <th>Alacak</th>
+                        <th>Bakiye</th>
+                        <th>Bakiye Bekleme Süresi</th>
+                        <th>Bakiye Ortalama Vade</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>{{ $data->EVRAKADET }} Adet</td>
-                        <td style="text-align:right;">{{ number_format($data->MATRAH,2,',','.') }}</td>
-                        <td style="text-align:right;">{{ number_format($data->VERGITUTAR,2,',','.')}}</td>
-                        <td style="text-align:right;">{{ number_format($data->GENELTUTAR,2,',','.') }}</td>
+                        <td style="text-align:right;">{{ number_format($data->BORC,2,',','.') }}</td>
+                        <td style="text-align:right;">{{ number_format($data->ALACAK,2,',','.')}}</td>
+                        <td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }}</td>
+                        <td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
+                        <td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
                     </tr>
                 </tbody>
             </table>

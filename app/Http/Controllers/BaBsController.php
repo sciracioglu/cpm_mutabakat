@@ -8,20 +8,20 @@ use Illuminate\Support\Facades\Mail;
 use App\VWADTY;
 use App\BYNODE;
 use App\VWASRK;
-use App\ARGBYNBS;
+use App\ARGBMB;
 
 class BaBsController extends Controller
 {
     public function index()
     {
-        $data = VWABBS::where('ISLEM', 0)
+        $data = VWARGBMB::where('ISLEM', 0)
                         ->where('GONDERILDI', 0)
                         ->get();
         if ($data->count() > 0) {
             foreach ($data as $firma) {
                 Mail::to($firma->EMAIL5)
                         ->send(new BaBsMail($firma));
-                ARGBYNBS::where('GUID', $firma->GUID)->update([
+                ARGBMB::where('GUID', $firma->GUID)->update([
                     'GONDERILDI' => 1
                 ]);
             }
