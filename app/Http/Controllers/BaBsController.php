@@ -19,7 +19,7 @@ class BaBsController extends Controller
                         ->get();
         if ($data->count() > 0) {
             foreach ($data as $firma) {
-                Mail::to($firma->EMAIL1)
+                Mail::to($firma->EMAIL5)
                         ->send(new BaBsMail($firma));
                 ARGBYNBS::where('GUID', $firma->GUID)->update([
                     'GONDERILDI' => 1
