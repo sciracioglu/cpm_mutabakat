@@ -9,6 +9,7 @@ use App\VWADTY;
 use App\BYNODE;
 use App\VWASRK;
 use App\ARGBMB;
+use App\VWARGBMB;
 
 class BaBsController extends Controller
 {
