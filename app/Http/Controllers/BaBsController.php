@@ -15,7 +15,7 @@ class BaBsController extends Controller
 {
     public function index()
     {
-        $data = VWARGBMB::where('ISLEM', 0)
+        $data = VWABBS::where('ISLEM', 0)
                         ->where('GONDERILDI', 0)
                         ->get();
         if ($data->count() > 0) {

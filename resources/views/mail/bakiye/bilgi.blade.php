@@ -109,35 +109,37 @@
             </h3>
            
             <p>
-                 Firmanıza ait BaBs bilgileri aşağıdaki gibidir.
+                 Firmanıza ait bakiye bilgileri aşağıdaki gibidir.
             </p>
             
             <table class="table" style="width:600px;">
                     <tr>
-						<th>Fatura Adedi</th>
-						<td style="text-align:right;">{{ $data->EVRAKADET }}</td>
+						<th>Borç</th>
+						<td style="text-align:right;">{{ number_format($data->BORC,2,',','.') }}</td>
 					</tr>
 					<tr>
-						<th>KDV Matrah</th>
-						<td style="text-align:right;">{{ number_format($data->MATRAH,2,',','.')}}</td>
+						<th>Alacak</th>
+						<td style="text-align:right;">{{ number_format($data->ALACAK,2,',','.')}}</td>
 					</tr>
 					<tr>
-						<th>KDV Tutar</th>
-						<td style="text-align:right;">{{ number_format($data->VERGITUTAR,2,',','.') }}</td>
+						<th>Bakiye</th>
+						<td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }}</td>
 					</tr>
 					<tr>
-						<th>Genel Toplam</th>
-						<td style="text-align:right;">{{ number_format($data->GENELTUTAR,2,',','.') }}</td>
+						<th>Bakiye Bekleme Süresi</th>
+						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
 					</tr>
-						
+						<th>Bakiye Ortalama Vade</th>
+						<td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
+                    </tr>
             </table>
                
             <p>
-                BaBs detayınız için aşağıdaki düğmeye basınız.
+                Detayınız için aşağıdaki düğmeye basınız.
             </p> 
            
 			<a href='http://85.105.113.12/{{ $data->GUID }}'>
-                BaBs Detayı
+                Bakiye Detayı
             </a>
             <hr>
             <div>
