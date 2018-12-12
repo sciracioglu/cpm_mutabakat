@@ -8,12 +8,17 @@ use App\VWABBS;
 use App\VWASRK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BilgiMail;
+use App\VWABMD;
 
 class MesajController extends Controller
 {
     public function index($id,$tip)
     {
-        $data         = VWABBS::where('GUID', $id)->first();
+        if($tip == 'BS'){
+            $data         = VWABBS::where('GUID', $id)->first();
+        } else if($tip == 'Bakiye'){
+            $data = VWABMD::where('GUID',$id)->first();
+        }
         //$firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
         return view('mesaj', compact('id', 'data','tip'));
     }
