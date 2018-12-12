@@ -10,8 +10,9 @@ use App\BYNODE;
 use App\VWASRK;
 use App\ARGBMB;
 use App\VWARGBMB;
+use App\VWABMD;
 
-class BaBsController extends Controller
+class BakiyeController extends Controller
 {
     public function index()
     {
@@ -31,17 +32,16 @@ class BaBsController extends Controller
 
     public function show($id)
     {
-        $data         = VWABBS::where('GUID', $id)->first();
+        $data         = ARGBMB::where('GUID', $id)->first();
         $firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
-        $detay        = VWADTY::where('HESAPKOD', $data->HESAPKOD)
-                        ->where('YIL', $data->YIL)
-                        ->get();
-        return view('babs.show', compact('data', 'detay', 'firma'));
+        $detay        = VWABMD::where('HESAPKOD', $data->HESAPKOD)
+                                ->get();
+        return view('bakiye.show', compact('data', 'detay', 'firma'));
     }
 
     public function store($id)
     {
-        BYNODE::where('GUID', $id)
+        ARGBMB::where('GUID', $id)
                 ->update([
                     'ACIKLAMA'    => 'Onaylandı',
                     'ISLEM'       => 1,

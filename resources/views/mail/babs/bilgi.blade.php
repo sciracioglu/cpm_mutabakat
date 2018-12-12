@@ -143,7 +143,7 @@
             </a>
             <hr>
             <div>
-				<div style="display:flex; align-items:center;">
+				<˝div style="display:flex; align-items:center;">
 					<img src="{{ $message->embed(public_path().'/img/aragonit.png') }}" style="height:40px;">
 				</div>
 				<div style="display:flex;">

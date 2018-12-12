@@ -17,3 +17,6 @@ Route::get('/{id}', 'BaBsController@show');
 Route::get('onay/{id}', 'BaBsController@store');
 Route::get('mesaj/{id}', 'MesajController@index');
 Route::post('mesaj', 'MesajController@store');
+Route::get('bakiye','BakiyeController@index');
+Route::get('bakiye/{id}','BakiyeController@show');
+Route::get('bakiye_onay/{id}','BakiyeController@store');
