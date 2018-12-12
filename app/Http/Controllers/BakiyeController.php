@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\VWABBS;
-use App\Mail\BaBsMail;
 use Illuminate\Support\Facades\Mail;
 use App\VWADTY;
 use App\BYNODE;
@@ -11,6 +10,7 @@ use App\VWASRK;
 use App\ARGBMB;
 use App\VWARGBMB;
 use App\VWABMD;
+use App\Mail\BakiyeMail;
 
 class BakiyeController extends Controller
 {
@@ -22,7 +22,7 @@ class BakiyeController extends Controller
         if ($data->count() > 0) {
             foreach ($data as $firma) {
                 Mail::to($firma->EMAIL5)
-                        ->send(new BaBsMail($firma));
+                        ->send(new BakiyeMail($firma));
                 ARGBMB::where('GUID', $firma->GUID)->update([
                     'GONDERILDI' => 1
                 ]);
