@@ -27,14 +27,16 @@ class MesajController extends Controller
     {
         $data = request()->validate([
             'id'    => 'required',
-            'mesaj' => 'required'
+            'mesaj' => 'required',
+            'tip' =>'required'
         ]);
 
+        $tip = request('tip');
         try {
-            $this->haberVer(request('tip'));
+            $this->haberVer($tip);
             ARGMSJ::create([
                         'GUID'  => request('id'),
-                        'TIPI' => request('tip'),
+                        'TIPI' => $tip,
                         'MESAJ' => request('mesaj')
                     ]);
             $response['status'] = 1;
