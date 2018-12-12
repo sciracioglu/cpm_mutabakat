@@ -128,7 +128,8 @@
 					<tr>
 						<th>Bakiye Bekleme Süresi</th>
 						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
-					</tr>
+                    </tr>
+                    <tr>
 						<th>Bakiye Ortalama Vade</th>
 						<td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
                     </tr>

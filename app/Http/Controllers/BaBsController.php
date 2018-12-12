@@ -10,6 +10,7 @@ use App\BYNODE;
 use App\VWASRK;
 use App\ARGBMB;
 use App\VWARGBMB;
+use App\ARGBYNBS;
 
 class BaBsController extends Controller
 {
@@ -22,7 +23,7 @@ class BaBsController extends Controller
             foreach ($data as $firma) {
                 Mail::to($firma->EMAIL5)
                         ->send(new BaBsMail($firma));
-                ARGBMB::where('GUID', $firma->GUID)->update([
+                ARGBYNBS::where('GUID', $firma->GUID)->update([
                     'GONDERILDI' => 1
                 ]);
             }

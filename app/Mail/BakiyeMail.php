@@ -30,6 +30,7 @@ class BakiyeMail extends Mailable
     public function build()
     {
         return $this->to($this->data->EMAIL5)
-        ->view('mail.bakiye.bilgi');
+                        ->subject($data->UNVAN.' Bakiye')
+                        ->view('mail.bakiye.bilgi');
     }
 }

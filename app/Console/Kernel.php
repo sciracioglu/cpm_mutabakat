@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         if (App::environment('production')) {
             $schedule->call('App\Http\Controllers\BaBsController@index')->everyMinute();
+            $schedule->call('App\Http\Controllers\BakiyeController@index')->everyMinute();
         }
     }
 
