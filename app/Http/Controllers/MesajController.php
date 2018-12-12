@@ -14,8 +14,8 @@ class MesajController extends Controller
     public function index($id)
     {
         $data         = VWABBS::where('GUID', $id)->first();
-        $firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
-        return view('mesaj', compact('id', 'firma', 'data'));
+        //$firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
+        return view('mesaj', compact('id', 'data'));
     }
 
     public function store()
