@@ -34,8 +34,7 @@ class BakiyeController extends Controller
     {
         $data         = ARGBMB::where('GUID', $id)->first();
         $firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
-        $detay        = VWABMD::where('HESAPKOD', $data->HESAPKOD)
-                                ->get();
+        $detay        = VWABMD::where('GUID', $id)->get();
         return view('bakiye.show', compact('data', 'detay', 'firma'));
     }
 
