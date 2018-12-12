@@ -64,7 +64,7 @@ class MesajController extends Controller
         return $veri;
     }
 
-    private function haberVer()
+    private function haberVer($tip)
     {
         $data               = $this->mesajGonderildi($tip);
         $firma              = VWASRK::where('SIRKETNO', $data['sirket'])->first();
