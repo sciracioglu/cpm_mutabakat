@@ -31,7 +31,7 @@ class MesajController extends Controller
         ]);
 
         try {
-            $this->haberVer();
+            $this->haberVer($tip);
             ARGMSJ::create([
                         'GUID'  => request('id'),
                         'TIPI' => request('tip'),
@@ -45,9 +45,14 @@ class MesajController extends Controller
         return $response;
     }
 
-    private function mesajGonderildi()
+    private function mesajGonderildi($tip)
     {
-        $data           = VWABBS::where('GUID', request('id'))->first();
+        if($tip == 'BS'){
+            $data           = VWABBS::where('GUID', request('id'))->first();
+        }
+        else if($tip =='Bakiye'){
+            $data           = VWABMD::where('GUID', request('id'))->first();
+        }
         $unvan          = $data->UNVAN . ' ' . $data->UNVAN2;
         $email          = $data->EMAIL5;
         $veri['id']     = request('id');
@@ -59,7 +64,7 @@ class MesajController extends Controller
 
     private function haberVer()
     {
-        $data               = $this->mesajGonderildi();
+        $data               = $this->mesajGonderildi($tip);
         $firma              = VWASRK::where('SIRKETNO', $data['sirket'])->first();
         $data['firma_mail'] = $firma->EMAIL;
 
