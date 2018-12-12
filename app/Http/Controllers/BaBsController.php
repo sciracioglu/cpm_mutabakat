@@ -42,7 +42,7 @@ class BaBsController extends Controller
 
     public function store($id)
     {
-        BYNODE::where('GUID', $id)
+        ARGBYNBS::where('GUID', $id)
                 ->update([
                     'ACIKLAMA'    => 'Onaylandı',
                     'ISLEM'       => 1,
