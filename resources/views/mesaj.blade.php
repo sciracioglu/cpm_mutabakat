@@ -35,12 +35,13 @@ var vue = new Vue({
         gonderildi:0,
         id:'{!! $id !!}',
         mesaj:'',
+        tip:'{!! $tip !!}'
     },
     methods:{
         onSubmit(){
             self=this;
             if(this.id!='' && this.mesaj !=''){
-                axios.post('/mesaj',{id:this.id, mesaj:this.mesaj})
+                axios.post('/mesaj',{id:this.id, mesaj:this.mesaj, tip:this.tip})
                     .then(function(response){
                         if(response.data.status == 1){
                             self.gonderildi = 1;
