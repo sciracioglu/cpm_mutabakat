@@ -30,7 +30,7 @@ class BaBsMail extends Mailable
     public function build()
     {
         return $this->to($this->data->EMAIL5)
-                    ->subject($this->data->UNVAN.' Bs Mütabakat')
+                    ->subject($this->data->SIRKETAD.' BS Mütabakat')
                     ->view('mail.babs.bilgi');
     }
 }

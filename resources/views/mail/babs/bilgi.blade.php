@@ -137,7 +137,7 @@
             </p> 
            
 			<a href='http://85.105.113.12/{{ $data->GUID }}'>
-                BaBs Detayı
+				BS Detayı
             </a>
             <hr>
             <div>
