@@ -31,7 +31,7 @@ class MesajController extends Controller
         ]);
 
         try {
-            $this->haberVer($tip);
+            $this->haberVer(request('tip'));
             ARGMSJ::create([
                         'GUID'  => request('id'),
                         'TIPI' => request('tip'),
