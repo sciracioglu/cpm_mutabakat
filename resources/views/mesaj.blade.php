@@ -12,6 +12,7 @@
         <p class="text-sm">Mesajınız gönderildi!</p>
     </div>
     <form v-else class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method='POST' action='/mesaj' @submit.prevent="onSubmit">
+        <input type='hidden' name='tip' value='{{ $tip }}' />
         <div class="mb-2">
             <label class="block text-grey-darker text-sm font-bold mb-2" for="mesajiniz">
                 Mesajınız

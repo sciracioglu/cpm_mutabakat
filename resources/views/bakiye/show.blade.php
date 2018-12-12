@@ -67,7 +67,7 @@
     @if($data->ISLEM == 0)
     <div class="flex flex-justified">
         <div class="flex-1">
-            <a href='/mesaj/{{ $data->GUID }}' class="bg-transparent hover:bg-red text-red-dark font-semibold hover:text-white py-2 px-4 border border-red hover:border-transparent rounded">Mesaj Gonder</a>
+            <a href='/mesaj/{{ $data->GUID }}/Bakiye' class="bg-transparent hover:bg-red text-red-dark font-semibold hover:text-white py-2 px-4 border border-red hover:border-transparent rounded">Mesaj Gonder</a>
         </div>
         <div class="">
             <a href='/bakiye_onay/{{ $data->GUID }}' class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Onaylıyorum</a>

@@ -15,7 +15,7 @@ Route::get('logo/{id}', 'BaBsController@logo');
 Route::get('/', 'BaBsController@index');
 Route::get('/{id}', 'BaBsController@show');
 Route::get('onay/{id}', 'BaBsController@store');
-Route::get('mesaj/{id}', 'MesajController@index');
+Route::get('mesaj/{id}/{tip}', 'MesajController@index');
 Route::post('mesaj', 'MesajController@store');
 Route::get('bakiye','BakiyeController@index');
 Route::get('bakiye/{id}','BakiyeController@show');

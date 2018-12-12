@@ -11,11 +11,11 @@ use App\Mail\BilgiMail;
 
 class MesajController extends Controller
 {
-    public function index($id)
+    public function index($id,$tip)
     {
         $data         = VWABBS::where('GUID', $id)->first();
         //$firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
-        return view('mesaj', compact('id', 'data'));
+        return view('mesaj', compact('id', 'data','tip'));
     }
 
     public function store()
@@ -29,6 +29,7 @@ class MesajController extends Controller
             $this->haberVer();
             ARGMSJ::create([
                         'GUID'  => request('id'),
+                        'TIPI' => request('tip'),
                         'MESAJ' => request('mesaj')
                     ]);
             $response['status'] = 1;
