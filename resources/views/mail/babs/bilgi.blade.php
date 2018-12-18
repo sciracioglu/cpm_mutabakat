@@ -109,31 +109,36 @@
             </h3>
            
             <p>
-                 Firmanıza ait BaBs bilgileri aşağıdaki gibidir.
+				<?php
+				$date = \Carbon::now()->locale('tr_TR');
+			
+
+				?>
+                 Firmanıza {{ $date->year }} / {{ $date->monthName }} ayında kesmiş olduğumuz fatura bilgileri aşağıdaki gibidir.
             </p>
             
             <table class="table" style="width:600px;">
                     <tr>
-						<th>Fatura Adedi</th>
+						<th>Fatura Sayısı</th>
 						<td style="text-align:right;">{{ $data->EVRAKADET }}</td>
 					</tr>
 					<tr>
 						<th>KDV Matrah</th>
-						<td style="text-align:right;">{{ number_format($data->MATRAH,2,',','.')}}</td>
+						<td style="text-align:right;">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
 					</tr>
 					<tr>
 						<th>KDV Tutar</th>
-						<td style="text-align:right;">{{ number_format($data->VERGITUTAR,2,',','.') }}</td>
+						<td style="text-align:right;">{{ number_format($data->VERGITUTAR,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
 						<th>Genel Toplam</th>
-						<td style="text-align:right;">{{ number_format($data->GENELTUTAR,2,',','.') }}</td>
+						<td style="text-align:right;">{{ number_format($data->GENELTUTAR,2,',','.') }} TRL</td>
 					</tr>
 						
             </table>
                
             <p>
-                BaBs detayınız için aşağıdaki düğmeye basınız.
+					Faturaların detayı için aşağıdaki düğmeye basınız.
             </p> 
            
 			<a href='http://85.105.113.12/{{ $data->GUID }}'>

@@ -9,7 +9,7 @@
     <title>aragonit - @yield('baslik')</title>
   </head>
   <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto text-xs">
         <div class="flex h-screen flex-col">
             <nav class="flex items-center bg-grey-lighter justify-between flex-wrap p-6 shadow">
                 <div class="flex items-center flex-no-shrink mr-6">

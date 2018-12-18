@@ -109,25 +109,18 @@
             </h3>
            
             <p>
-                 Firmanıza ait bakiye bilgileri aşağıdaki gibidir.
+					{{ date('d.m.Y') }} tarihi itibariyle firmanızın bakiyesi aşağıdaki gibidir.
             </p>
             
             <table class="table" style="width:600px;">
-                    <tr>
-						<th>Borç</th>
-						<td style="text-align:right;">{{ number_format($data->BORC,2,',','.') }}</td>
-					</tr>
-					<tr>
-						<th>Alacak</th>
-						<td style="text-align:right;">{{ number_format($data->ALACAK,2,',','.')}}</td>
-					</tr>
+                    
 					<tr>
 						<th>Bakiye</th>
-						<td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }}</td>
+						<td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
 						<th>Bakiye Bekleme Süresi</th>
-						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }}</td>
+						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }} Gün</td>
                     </tr>
                     <tr>
 						<th>Bakiye Ortalama Vade</th>
@@ -136,7 +129,7 @@
             </table>
                
             <p>
-                Detayınız için aşağıdaki düğmeye basınız.
+					Bakiye detayı için aşağıdaki düğmeye basınız...
             </p> 
            
 			<a href='http://85.105.113.12/bakiye/{{ $data->GUID }}'>
