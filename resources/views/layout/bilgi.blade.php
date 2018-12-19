@@ -6,6 +6,11 @@
 
     <link rel="stylesheet" href="/css/app.css">
     @yield('css')
+    <style>
+        body{
+            font-size: .8em;
+        }
+    </style>
     <title>aragonit - @yield('baslik')</title>
   </head>
   <body>

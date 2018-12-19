@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="/css/app.css">
+    <style>
+        body{
+            font-size: .8em;
+        }
+    </style>
     @yield('css')
     <title>aragonit - @yield('baslik')</title>
   </head>
