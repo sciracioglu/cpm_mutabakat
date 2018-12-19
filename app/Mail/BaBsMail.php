@@ -31,7 +31,10 @@ class BaBsMail extends Mailable
      */
     public function build()
     {
-        $date = Carbon::now()->locale('tr_TR');
+        $date = Carbon::now()->settings([
+            'locale'   => 'tr_TR',
+            'timezone' => 'Europe/Istanbul',
+        ]);
 
         $this->tarih = $date->year . ' / ' . $date->monthName;
 
