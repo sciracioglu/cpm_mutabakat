@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Carbon;
 
 class BaBsMail extends Mailable
 {
@@ -31,10 +30,6 @@ class BaBsMail extends Mailable
      */
     public function build()
     {
-        $date = Carbon::now()->settings([
-            'locale'   => 'tr_TR',
-            'timezone' => 'Europe/Istanbul',
-        ]);
         $aylar       = [1=>'Ocak', 2=>'Şubat', 3=>'Mart', 4=>'Nisan', 5=>'Mayıs', 6=>'Haziran', 7=>'Temmuz', 8=>'Ağustos', 9=>'Eylül', 10=>'Ekim', 11=>'Kasım', 12=>'Aralık'];
         $ay          = date('n');
         $this->tarih = date('Y') . ' / ' . $aylar[$ay];
