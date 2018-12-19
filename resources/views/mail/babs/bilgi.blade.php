@@ -109,12 +109,8 @@
             </h3>
            
             <p>
-				<?php
-				$date = \Carbon::now()->locale('tr_TR');
-			
-
-				?>
-                 Firmanıza {{ $date->year }} / {{ $date->monthName }} ayında kesmiş olduğumuz fatura bilgileri aşağıdaki gibidir.
+				
+                Firmanıza {{ $tarih }} ayında kesmiş olduğumuz fatura bilgileri aşağıdaki gibidir.
             </p>
             
             <table class="table" style="width:600px;">
