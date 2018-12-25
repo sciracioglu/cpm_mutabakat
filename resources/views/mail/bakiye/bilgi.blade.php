@@ -112,19 +112,19 @@
 					{{ date('d.m.Y') }} tarihi itibariyle firmanızın bakiyesi aşağıdaki gibidir.
             </p>
             
-            <table class="table" style="width:600px;">
+            <table class="table" style="width:400px;">
                     
 					<tr>
-						<th>Bakiye</th>
-						<td style="text-align:right;">{{ number_format($data->BAKIYE,2,',','.') }} TRL</td>
+						<th style="width:100px; background-color:bisque;">Bakiye</th>
+						<td style="width:300px; text-align:right; background-color:bisque;">{{ number_format($data->BAKIYE,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
-						<th>Bakiye Bekleme Süresi</th>
-						<td style="text-align:right;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }} Gün</td>
+						<th style="background-color:ghostwhite; ">Bakiye Bekleme Süresi</th>
+						<td style="text-align:right;background-color:ghostwhite;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }} Gün</td>
                     </tr>
                     <tr>
-						<th>Bakiye Ortalama Vade</th>
-						<td style="text-align:right;">{{ $data->BAKIYEORTVADE }}</td>
+						<th style="width:100px; background-color:bisque;">Bakiye Ortalama Vade</th>
+						<td style="text-align:right; background-color:bisque;">{{ $data->BAKIYEORTVADE }}</td>
                     </tr>
             </table>
                
@@ -137,7 +137,7 @@
             </a>
             <hr>
             <div>
-				<˝div style="display:flex; align-items:center;">
+				<div style="display:flex; align-items:center;">
 					<img src="{{ $message->embed(public_path().'/img/aragonit.png') }}" style="height:40px;">
 				</div>
 				<div style="display:flex;">

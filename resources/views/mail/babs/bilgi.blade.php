@@ -113,22 +113,22 @@
                 Firmanıza {{ $tarih }} ayında kesmiş olduğumuz fatura bilgileri aşağıdaki gibidir.
             </p>
             
-            <table class="table" style="width:600px;">
+            <table class="table" style="width:400px;">
                     <tr>
-						<th>Fatura Sayısı</th>
-						<td style="text-align:right;">{{ $data->EVRAKADET }}</td>
+						<th style="width:100px; background-color:bisque;">Fatura Sayısı</th>
+						<td style="text-align:right;width:300px; background-color:bisque;">{{ $data->EVRAKADET }}</td>
 					</tr>
 					<tr>
-						<th>KDV Matrah</th>
-						<td style="text-align:right;">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
+						<th style="background-color:ghostwhite; ">KDV Matrah</th>
+						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
 					</tr>
 					<tr>
-						<th>KDV Tutar</th>
-						<td style="text-align:right;">{{ number_format($data->VERGITUTAR,2,',','.') }} TRL</td>
+						<th style="width:100px; background-color:bisque;">KDV Tutar</th>
+						<td style="text-align:right; background-color:bisque;">{{ number_format($data->VERGITUTAR,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
-						<th>Genel Toplam</th>
-						<td style="text-align:right;">{{ number_format($data->GENELTUTAR,2,',','.') }} TRL</td>
+						<th style="background-color:ghostwhite; ">Genel Toplam</th>
+						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->GENELTUTAR,2,',','.') }} TRL</td>
 					</tr>
 						
             </table>
@@ -142,7 +142,7 @@
             </a>
             <hr>
             <div>
-				<˝div style="display:flex; align-items:center;">
+				<div style="display:flex; align-items:center;">
 					<img src="{{ $message->embed(public_path().'/img/aragonit.png') }}" style="height:40px;">
 				</div>
 				<div style="display:flex;">
