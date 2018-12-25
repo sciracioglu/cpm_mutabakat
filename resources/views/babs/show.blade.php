@@ -28,11 +28,11 @@
             @endphp  
             @foreach($detay as $fatura)
             <tr  class="hover:bg-blue-lightest">
-                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->EVRAKNO }}</td>
-                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->EVRAKTARIH }}</td>
-                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->TUTAR,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b border-grey-light text-right">{{ number_format($fatura->KDV,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->TOPLAMTUTAR,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light">{{ $fatura->EVRAKNO }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light">{{ $fatura->EVRAKTARIH }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->TUTAR,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{ number_format($fatura->KDV,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->TOPLAMTUTAR,2,',','.') }}</td>
             </tr>
             @php
              $top_kdv += $fatura->KDV;
@@ -41,10 +41,10 @@
             @endphp            
             @endforeach
             <tr  class="hover:bg-red-lightest">
-                <td colspan="2" class="py-2 px-3 border-b border-grey-light text-red-dark">{{ $detay->count() }} Adet Fatura </td>
-                <td class="py-2 px-3 border-b border-grey-light text-right text-red-dark">{{ number_format($top_tutar,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b border-grey-light text-right text-red-dark">{{ number_format($top_kdv,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b border-grey-light text-right text-red-dark">{{ number_format($top_toplam,2,',','.') }}</td>
+                <td colspan="2" class="py-2 px-3 border-b text-sm border-grey-light text-red-dark">{{ $detay->count() }} Adet Fatura </td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_tutar,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_kdv,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_toplam,2,',','.') }}</td>
             </tr>
         </tbody>
     </table>
