@@ -120,7 +120,7 @@
 					</tr>
 					<tr>
 						<th style="background-color:ghostwhite; ">Bakiye Bekleme Süresi</th>
-						<td style="text-align:right;background-color:ghostwhite;">{{ number_format($data->BAKIYEBEKLEMESURE,2,',','.') }} Gün</td>
+						<td style="text-align:right;background-color:ghostwhite;">{{ number_format($data->BAKIYEBEKLEMESURE,0,',','.') }} Gün</td>
                     </tr>
                     <tr>
 						<th style="width:100px; background-color:bisque;">Bakiye Ortalama Vade</th>

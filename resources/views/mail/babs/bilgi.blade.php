@@ -119,12 +119,12 @@
 						<td style="text-align:right;width:300px; background-color:bisque;">{{ $data->EVRAKADET }}</td>
 					</tr>
 					<tr>
-						<th style="background-color:ghostwhite; ">KDV Matrah</th>
-						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
-					</tr>
-					<tr>
 						<th style="width:100px; background-color:bisque;">KDV Tutar</th>
 						<td style="text-align:right; background-color:bisque;">{{ number_format($data->VERGITUTAR,2,',','.') }} TRL</td>
+					</tr>
+					<tr>
+						<th style="background-color:ghostwhite; ">KDV Matrah</th>
+						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
 					</tr>
 					<tr>
 						<th style="background-color:ghostwhite; ">Genel Toplam</th>

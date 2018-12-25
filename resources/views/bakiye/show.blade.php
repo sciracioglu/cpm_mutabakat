@@ -37,19 +37,20 @@
             @endphp  
             @foreach($detay as $fatura)
             <tr  class="hover:bg-blue-lightest">
-                <td class="py-4 px-6 border-b border-grey-light">{{ $fatura->EVRAKNO }}</td>
-                <td class="py-4 px-6 border-b border-grey-light">{{ $fatura->EVRAKTARIH }}</td>
-                <td class="py-4 px-6 border-b border-grey-light">{{ $fatura->BA }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->TUTAR,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{ number_format($fatura->KULLANILAN,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->KALAN,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->BAKIYE,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZTUTAR,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZKULLANILAN,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZKALAN,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZBAKIYE,2,',','.') }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  $fatura->BEKLEMESURE }}</td>
-                <td class="py-4 px-6 border-b border-grey-light text-right">{{  $fatura->VADEGUNFARK }}</td>
+                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->EVRAKNO }}</td>
+                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->EVRAKTARIH }}</td>
+                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->ISLEMTIPI }}</td>
+                <td class="py-2 px-3 border-b border-grey-light">{{ $fatura->BA }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->TUTAR,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{ number_format($fatura->KULLANILAN,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->KALAN,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->BAKIYE,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZTUTAR,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZKULLANILAN,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZKALAN,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  number_format($fatura->DOVIZBAKIYE,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  $fatura->BEKLEMESURE }}</td>
+                <td class="py-2 px-3 border-b border-grey-light text-right">{{  $fatura->VADEGUNFARKI }}</td>
             </tr>
             @php
              $top_bakiye += $fatura->BAKIYE;
@@ -57,10 +58,10 @@
             @endphp            
             @endforeach
             <tr  class="hover:bg-red-lightest">
-                <td colspan="2" class="py-4 px-6 border-b border-grey-light text-red-dark">Toplam</td>
-                <td colspan="6"class="py-4 px-6 border-b border-grey-light text-right text-red-dark">{{ number_format($top_bakiye,2,',','.') }}</td>
-                <td colspan="4" class="py-4 px-6 border-b border-grey-light text-right text-red-dark">{{ number_format($top_doviz_bakiye,2,',','.') }}</td>
-                <td colspan="2" class="py-4 px-6 border-b border-grey-light text-right text-red-dark"></td>
+                <td colspan="2" class="py-2 px-3 border-b border-grey-light text-red-dark">Toplam</td>
+                <td colspan="6"class="py-2 px-3 border-b border-grey-light text-right text-red-dark">{{ number_format($top_bakiye,2,',','.') }}</td>
+                <td colspan="4" class="py-2 px-3 border-b border-grey-light text-right text-red-dark">{{ number_format($top_doviz_bakiye,2,',','.') }}</td>
+                <td colspan="2" class="py-2 px-3 border-b border-grey-light text-right text-red-dark"></td>
             </tr>
         </tbody>
     </table>
