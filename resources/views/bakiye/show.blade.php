@@ -19,13 +19,12 @@
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">BA</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Tutar</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Kullanılan</th>
-                <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Kalan</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Bakiye</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Tutar</th>
+                <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Cinsi</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Kullanılan</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Kalan</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Bakiye</th>
-                <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Bekleme Süre</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Vade Gün Fark</th>
             </tr>
         </thead>
@@ -43,13 +42,12 @@
                 <td class="py-2 px-3 border-b text-sm border-grey-light">{{ $fatura->BA }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->TUTAR,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{ number_format($fatura->KULLANILAN,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->KALAN,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->BAKIYE,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZTUTAR,2,',','.') }}</td>
+                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  $fatura->DOVIZCINS }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZKULLANILAN,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZKALAN,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZBAKIYE,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  $fatura->BEKLEMESURE }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  $fatura->VADEGUNFARKI }}</td>
             </tr>
             @php
@@ -59,7 +57,7 @@
             @endforeach
             <tr  class="hover:bg-red-lightest">
                 <td colspan="2" class="py-2 px-3 border-b text-sm border-grey-light text-red-dark">Toplam</td>
-                <td colspan="6"class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_bakiye,2,',','.') }}</td>
+                <td colspan="5"class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_bakiye,2,',','.') }}</td>
                 <td colspan="4" class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark">{{ number_format($top_doviz_bakiye,2,',','.') }}</td>
                 <td colspan="2" class="py-2 px-3 border-b text-sm border-grey-light text-right text-red-dark"></td>
             </tr>
