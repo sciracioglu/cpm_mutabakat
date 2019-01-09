@@ -8,7 +8,7 @@
 @section('icerik')
 
 <div class="" id='app'>
-    <h4>{{ $firma->FIRMAADI }}</h4>
+    <h4>{{ $data->UNVAN }}</h4>
     <hr>
     <table  class="text-left m-4 " style="border-collapse:collapse">
         <thead>
