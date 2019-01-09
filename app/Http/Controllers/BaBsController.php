@@ -6,10 +6,7 @@ use App\VWABBS;
 use App\Mail\BaBsMail;
 use Illuminate\Support\Facades\Mail;
 use App\VWADTY;
-use App\BYNODE;
 use App\VWASRK;
-use App\ARGBMB;
-use App\VWARGBMB;
 use App\ARGBYNBS;
 
 class BaBsController extends Controller
@@ -35,8 +32,10 @@ class BaBsController extends Controller
         $data         = VWABBS::where('GUID', $id)->first();
         $firma        = VWASRK::where('SIRKETNO', $data->SIRKETNO)->first();
         $detay        = VWADTY::where('HESAPKOD', $data->HESAPKOD)
-                        ->where('YIL', $data->YIL)
-                        ->get();
+                                ->where('YIL', $data->YIL)
+                                ->where('AY', $data->AY)
+                                ->get();
+
         return view('babs.show', compact('data', 'detay', 'firma'));
     }
 
@@ -48,6 +47,7 @@ class BaBsController extends Controller
                     'ISLEM'       => 1,
                     'ISLEMTARIH'  => date('Y-m-d H:i:s')
                 ]);
+
         return back();
     }
 }
