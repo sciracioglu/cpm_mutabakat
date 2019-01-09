@@ -115,19 +115,19 @@
             
             <table class="table" style="width:400px;">
                     <tr>
-						<th style="width:100px; background-color:bisque;">Fatura Sayısı</th>
-						<td style="text-align:right;width:300px; background-color:bisque;">{{ $data->EVRAKADET }}</td>
+						<td style="width:200px; background-color:bisque;">Fatura Sayısı</td>
+						<td style="text-align:right;width:200px; background-color:bisque;">{{ $data->EVRAKADET }}</td>
 					</tr>
 					<tr>
-						<th style="width:100px; background-color:bisque;">KDV Tutar</th>
+						<td style="width:200px; background-color:bisque;">KDV Tutar</td>
 						<td style="text-align:right; background-color:bisque;">{{ number_format($data->VERGITUTAR,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
-						<th style="background-color:ghostwhite; ">KDV Matrah</th>
+						<td style="background-color:ghostwhite; ">KDV Matrah</td>
 						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->MATRAH,2,',','.')}} TRL</td>
 					</tr>
 					<tr>
-						<th style="background-color:ghostwhite; ">Genel Toplam</th>
+						<td style="background-color:ghostwhite; ">Genel Toplam</td>
 						<td style="text-align:right;background-color:ghostwhite; ">{{ number_format($data->GENELTUTAR,2,',','.') }} TRL</td>
 					</tr>
 						

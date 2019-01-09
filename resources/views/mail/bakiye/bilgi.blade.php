@@ -115,15 +115,15 @@
             <table class="table" style="width:400px;">
                     
 					<tr>
-						<th style="width:100px; background-color:bisque;">Bakiye</th>
-						<td style="width:300px; text-align:right; background-color:bisque;">{{ number_format($data->BAKIYE,2,',','.') }} TRL</td>
+						<td style="width:200px; background-color:bisque;">Bakiye</td>
+						<td style="width:200px; text-align:right; background-color:bisque;">{{ number_format($data->BAKIYE,2,',','.') }} TRL</td>
 					</tr>
 					<tr>
-						<th style="background-color:ghostwhite; ">Bakiye Bekleme Süresi</th>
+						<td style="background-color:ghostwhite; ">Bakiye Bekleme Süresi</td>
 						<td style="text-align:right;background-color:ghostwhite;">{{ number_format($data->BAKIYEBEKLEMESURE,0,',','.') }} Gün</td>
                     </tr>
                     <tr>
-						<th style="width:100px; background-color:bisque;">Bakiye Ortalama Vade</th>
+						<td style="width:100px; background-color:bisque;">Bakiye Ortalama Vade</td>
 						<td style="text-align:right; background-color:bisque;">{{ $data->BAKIYEORTVADE }}</td>
                     </tr>
             </table>
