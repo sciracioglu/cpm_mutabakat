@@ -23,7 +23,6 @@
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Cinsi</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Tutar</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Kullanılan</th>
-                <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Kalan</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Döviz Bakiye</th>
                 <th class="py-4 px-6 bg-grey-lighter font-sans font-medium uppercase text-sm text-grey border-b border-grey-light">Vade Gün Fark</th>
             </tr>
@@ -46,7 +45,6 @@
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  $fatura->DOVIZCINS }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZTUTAR,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZKULLANILAN,2,',','.') }}</td>
-                <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZKALAN,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  number_format($fatura->DOVIZBAKIYE,2,',','.') }}</td>
                 <td class="py-2 px-3 border-b text-sm border-grey-light text-right">{{  $fatura->VADEGUNFARKI }}</td>
             </tr>
